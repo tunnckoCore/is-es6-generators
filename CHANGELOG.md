@@ -1,5 +1,9 @@
 
 
+## 1.0.1 - 2015-05-26
+- Release v1.0.1 / npm@v1.0.1
+- externalize
+
 ## 1.0.0 - 2015-05-26
 - Release v1.0.0 / npm@v1.0.0
 - update `see also`
