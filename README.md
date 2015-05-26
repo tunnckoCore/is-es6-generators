@@ -1,6 +1,6 @@
 # is-es6-generators [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Check whether a value is a generator or generator function. The [co()](https://github.com/tj/co) way, more strict checking. Always return boolean true or false, never null or undefined.
+> Check whether a value is a `Generator` or `GeneratorFunction`. The [co()](https://github.com/tj/co) way, more strict checking. Always return boolean true or false, never null or undefined.
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
@@ -39,6 +39,8 @@ isGeneratorFunction(generator) //=> false
 
 ## See also
 - [apidocs-cli](https://github.com/tunnckocore/apidocs-cli): Async CLI for automatically generating API docs from code comments
+- [is-es6-generator](https://github.com/tunnckocore/is-es6-generator): Check that given value is `Generator`
+- [is-es6-generator-function](https://github.com/tunnckocore/is-es6-generator-function): Check that given value is `GeneratorFunction`
 - [is-generator-function-name](https://github.com/tunnckocore/is-generator-function-name): Check that given value have `GeneratorFunction` name… [more](https://github.com/tunnckocore/is-generator-function-name).
 - [is-generator-function](https://github.com/ljharb/is-generator-function): Determine if a function is an ES6 generator function or not.
 - [is-generator](https://github.com/blakeembrey/is-generator): Check whether a value is a generator or generator function
