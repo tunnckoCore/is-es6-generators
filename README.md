@@ -38,6 +38,7 @@ isGeneratorFunction(generator) //=> false
 
 
 ## See also
+- [apidocs-cli](https://github.com/tunnckocore/apidocs-cli): Async CLI for automatically generating API docs from code comments
 - [is-generator-function-name](https://github.com/tunnckocore/is-generator-function-name): Check that given value have `GeneratorFunction` name… [more](https://github.com/tunnckocore/is-generator-function-name).
 - [is-generator-function](https://github.com/ljharb/is-generator-function): Determine if a function is an ES6 generator function or not.
 - [is-generator](https://github.com/blakeembrey/is-generator): Check whether a value is a generator or generator function
