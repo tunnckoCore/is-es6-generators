@@ -10,10 +10,26 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "is-generator-function-name": "^1.0.0"
+    "is-generator-function-name": "~1.0.0"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
   },
-  "keywords": []
+  "keywords": [
+    "check",
+    "es2015",
+    "es6",
+    "es7",
+    "function",
+    "functions",
+    "generator",
+    "generatorfunction",
+    "generators",
+    "is",
+    "is-function",
+    "is-generator",
+    "is-generator-function",
+    "next",
+    "validate"
+  ]
 }
