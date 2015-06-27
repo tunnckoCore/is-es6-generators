@@ -10,10 +10,16 @@
 var isGenerator = require('is-es6-generator')
 var isGeneratorFunction = require('is-es6-generator-function')
 
-/**
- * Expose `is-es6-generators`
- */
-
 exports = module.exports = isGenerator
-exports.isGenerator = exports.isGenerator = isGenerator
-exports.fn = exports.isGeneratorFunction = isGeneratorFunction
+
+exports.fn = isGeneratorFunction
+exports.gen = isGenerator
+exports.gen.fn = isGeneratorFunction
+exports.generator = isGenerator
+exports.generator.fn = isGeneratorFunction
+exports.isGen = isGenerator
+exports.isGen.fn = isGeneratorFunction
+exports.isGenerator = isGenerator
+exports.isGeneratorFn = isGeneratorFunction
+exports.isGenerator.fn = isGeneratorFunction
+exports.isGeneratorFunction = isGeneratorFunction

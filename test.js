@@ -10,43 +10,57 @@
 'use strict'
 
 var test = require('assertit')
-var isGenerator = require('./index')
-var isGeneratorFunction = require('./index').fn
+var g = require('./index')
 
 test('is-es6-generators:', function () {
+  test('should have few aliases', function (done) {
+    test.equal(typeof g, 'function')
+    test.equal(typeof g.fn, 'function')
+    test.equal(typeof g.gen, 'function')
+    test.equal(typeof g.gen.fn, 'function')
+    test.equal(typeof g.generator, 'function')
+    test.equal(typeof g.generator.fn, 'function')
+    test.equal(typeof g.isGen, 'function')
+    test.equal(typeof g.isGen.fn, 'function')
+    test.equal(typeof g.isGenerator, 'function')
+    test.equal(typeof g.isGeneratorFn, 'function')
+    test.equal(typeof g.isGenerator.fn, 'function')
+    test.equal(typeof g.isGeneratorFunction, 'function')
+    done()
+  })
   test('generators', function () {
     test('should return false with non-generators', function () {
-      test.equal(isGenerator(null), false)
-      test.equal(isGenerator(undefined), false)
-      test.equal(isGenerator([1, 2, 3]), false)
-      test.equal(isGenerator({name: 'GeneratorFunction'}), false)
-      test.equal(isGenerator(25), false)
-      test.equal(isGenerator('test'), false)
-      test.equal(isGenerator(function * () {}), false)
+      test.equal(g.generator(null), false)
+      test.equal(g.generator(undefined), false)
+      test.equal(g.generator([1, 2, 3]), false)
+      test.equal(g.generator({name: 'GeneratorFunction'}), false)
+      test.equal(g.generator(25), false)
+      test.equal(g.generator('test'), false)
+      test.equal(g.generator(function * () {}), false)
     })
     test('should return true with a generator', function () {
-      test.equal(isGenerator((function * () {})()), true)
-      test.equal(isGenerator((function * () { yield 42 })()), true)
+      test.equal(g.generator((function * () {})()), true)
+      test.equal(g.generator((function * () { yield 42 })()), true)
     })
   })
 
   test('generator functions', function () {
     test('should return false with non-generator function', function () {
-      test.equal(isGeneratorFunction(null), false)
-      test.equal(isGeneratorFunction(undefined), false)
-      test.equal(isGeneratorFunction(function () {}), false)
-      test.equal(isGeneratorFunction([55, 23, 24]), false)
-      test.equal(isGeneratorFunction({name: 'GeneratorFunction'}), false)
-      test.equal(isGeneratorFunction(25), false)
-      test.equal(isGeneratorFunction('foo bar'), false)
+      test.equal(g.gen.fn(null), false)
+      test.equal(g.gen.fn(undefined), false)
+      test.equal(g.gen.fn(function () {}), false)
+      test.equal(g.gen.fn([55, 23, 24]), false)
+      test.equal(g.gen.fn({name: 'GeneratorFunction'}), false)
+      test.equal(g.gen.fn(25), false)
+      test.equal(g.gen.fn('foo bar'), false)
       var noConstructorFn = function () {}
       noConstructorFn.constructor = undefined
 
-      test.equal(isGeneratorFunction(noConstructorFn), false)
+      test.equal(g.gen.fn(noConstructorFn), false)
     })
     test('should return true with a generator functions', function () {
-      test.equal(isGeneratorFunction(function * () {}), true)
-      test.equal(isGeneratorFunction(function * () { yield 42 }), true)
+      test.equal(g.gen.fn(function * () {}), true)
+      test.equal(g.gen.fn(function * () { yield 42 }), true)
     })
   })
 })

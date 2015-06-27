@@ -48,7 +48,7 @@ isGeneratorFunction(generator) //=> false
 - [is-promise](https://github.com/then/is-promise): Test whether an object looks like a promises-a+ promise
 - [is-missing](https://github.com/tunnckoCore/is-missing): Check that given `name` or `user/repo` exists in npm registry or in github as… [more](https://github.com/tunnckoCore/is-missing)
 - [is-installed](https://github.com/tunnckoCore/is-installed): Checks that given package is installed on the system - globally or locally.
-- [is-kindof](https://github.com/tunnckoCore/is-kindof): Thin wrapper around `kind-of` and in bonus functional api.
+- [is-kindof](https://github.com/tunnckoCore/is-kindof): Check type of given javascript value. Support promises, generators, streams, and native types. Thin wrapper around `kind-of` module.
 - [npm-related](https://github.com/tunnckoCore/npm-related): Thin wrapper on top of `helper-related` for generating a list of links to the… [more](https://github.com/tunnckoCore/npm-related)
 
 
