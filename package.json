@@ -1,6 +1,6 @@
 {
   "name": "is-es6-generators",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check whether a value is a `Generator` or `GeneratorFunction`. The `co` way, more strict checking. Always return boolean true or false, never null or undefined.",
   "repository": "tunnckoCore/is-es6-generators",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
